@@ -3,11 +3,13 @@
 
 #include <Arduino.h>
 
-extern float pm25, pm10;
-extern float temperature, humidity;
-extern int vocIndex;
+struct SensorData {
+    int pm1_0;
+    int pm2_5;
+    int pm10;
+};
 
-void setupSensors();
-void readSensors();
+void initSensors();
+SensorData readPMS();
 
 #endif
