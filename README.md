@@ -1,21 +1,21 @@
 # Clean Air Project
 
-The Clean Air Project is an open-source environmental monitoring and community impact initiative focused on air-quality data transparency, public engagement, and evidence-based action.
+An open-source initiative to provide **low-cost air-quality monitoring**, **community alerts**, and **environmental justice data tools** for underserved or pollution-burdened regions.
 
-### Key Features
-- Real-time air quality sensor network
-- Transparent data pipeline
-- Public dashboards and visualizations
-- Community engagement toolkit
+## Features
+- DIY low-cost particulate + VOC sensor nodes  
+- Simple firmware (ESP32 / MicroPython or Arduino)  
+- Flask-based data upload API  
+- JSON/CSV data pipelines  
+- Community dashboards and alert tools  
+- Open licensing for full community use  
 
-### Repository Contents
-- **docs/** — detailed project documentation
-- **schematics/** — system architecture diagrams
-- **src/** — data collection, processing, and visualization templates
-- **assets/** — logos, branding, and sharable visual elements
+## Repository Structure
 
-### Getting Started
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/mamaofthree579-ship-it/clean-air-project.git
-   
+/src/                Firmware + API + Dashboard /docs/               Documentation + setup /schematics/         Diagrams (ASCII + PNG future) /assets/branding/    Logo + color palette + identity /data/               Sample datasets
+
+## License
+MIT License — free for all community use.
+
+## Contribute
+All communities, educators, engineers, and organizers are welcome.
