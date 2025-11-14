@@ -1,0 +1,35 @@
+name: Automated Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  build-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install PlatformIO
+        run: pip install platformio
+
+      - name: Compile Firmware
+        working-directory: ./firmware
+        run: platformio run
+
+      - name: Upload Release Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: firmware-binaries
+          path: firmware/.pio/build/esp32dev/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: firmware/.pio/build/esp32dev/firmware.bin
+          tag_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+          
