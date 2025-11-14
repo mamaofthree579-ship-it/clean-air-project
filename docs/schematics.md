@@ -42,6 +42,7 @@ This diagram shows the high-level flow of the air monitoring node.
 | Community Alerts | <-- Threshold Logic -------- | Visualization UI |
 +------------------+                             +------------------+
 
+![Air Quality Data Pipeline](../schematics/schematic02.png)
 📘 Schematic 3 — Public Dashboard Layout
 
 +--------------------------------------------------------------+
@@ -52,3 +53,4 @@ This diagram shows the high-level flow of the air monitoring node.
 +---------------------------+----------------------------------+
 | [ Sensor List ]           |  [ Alerts & Status ]             |
 +--------------------------------------------------------------+
+
