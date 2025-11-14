@@ -1,7 +1,10 @@
 #ifndef NETWORK_H
 #define NETWORK_H
 
-void setupNetwork();
-void sendPayload();
+#include <Arduino.h>
+#include "sensors.h"
+
+void connectWiFi();
+void sendPayload(SensorData data);
 
 #endif
