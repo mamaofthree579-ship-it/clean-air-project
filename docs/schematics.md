@@ -20,3 +20,17 @@
 +------------------------------------------------------+
 |  Powered by USB / Solar Panel / Battery Pack         |
 +------------------------------------------------------+
+
+📘 Schematic 2 — Air Quality Data Pipeline
+
++------------------+     +------------------+     +------------------+
+|  Sensor Network  | --> |  Gateway / API   | --> |  Data Processor   |
++------------------+     +------------------+     +------------------+
+        |                        |                         |
+        |                        v                         v
+        |                  Store JSON                Analyze / Validate
+        |                                                |
+        v                                                v
++------------------+                             +------------------+
+| Community Alerts | <-- Threshold Logic -------- | Visualization UI |
++------------------+                             +------------------+
