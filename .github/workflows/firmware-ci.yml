@@ -3,7 +3,7 @@ name: Firmware CI
 on:
   push:
     paths:
-      - "src/firmware/**"
+      - "firmware/src/**"
   pull_request:
 
 jobs:
