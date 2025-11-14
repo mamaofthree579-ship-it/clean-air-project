@@ -4,36 +4,51 @@
 #include "network.h"
 #include "utilities.h"
 
-unsigned long lastSend = 0;
-const unsigned long sendInterval = 30 * 1000; // 30 seconds
+unsigned long lastSensorRead = 0;
+unsigned long lastUpload = 0;
+
+SensorReadings latest = {0};
 
 void setup() {
-    Serial.begin(115200);
-    delay(500);
+  Serial.begin(115200);
+  delay(200);
+  Serial.println("\n=== Clean Air Node Boot ===");
 
-    Serial.println("\n--- CLEAN AIR PROJECT: ESP32 AIR NODE ---");
+  initLED();
+  flashLED(2, 80);
 
-    initLED();
-    flashLED(3, 150);
+  initSensors();        // sensor init (PMS, BME, optional VOC)
+  initNetwork();        // WiFi init (and MQTT / OTA optional)
 
-    connectWiFi();
-    initSensors();
+  flashLED(3, 50);
 }
 
 void loop() {
-    if (millis() - lastSend > sendInterval) {
-        lastSend = millis();
+  unsigned long now = millis();
 
-        SensorData data = readPMS();
+  if (now - lastSensorRead >= SENSOR_READ_MS) {
+    lastSensorRead = now;
+    latest = readAllSensors();
+    Serial.println("[SENSOR] Read complete");
+  }
 
-        Serial.println("--- Sensor Reading ---");
-        Serial.printf("PM1.0: %d\n", data.pm1_0);
-        Serial.printf("PM2.5: %d\n", data.pm2_5);
-        Serial.printf("PM10:  %d\n", data.pm10);
-
-        flashLED(1, 50);
-        sendPayload(data);
+  if (now - lastUpload >= UPLOAD_INTERVAL_MS) {
+    lastUpload = now;
+    Serial.println("[UPLOAD] Sending data");
+    bool ok = sendData(latest);
+    if (ok) {
+      flashLED(1, 60);
+      Serial.println("[UPLOAD] Success");
+    } else {
+      Serial.println("[UPLOAD] Failed");
+      flashLED(2, 120);
     }
+  }
 
-    delay(50);
+  // Optional: handle OTA
+  #if ENABLE_OTA
+  handleOTA();
+  #endif
+
+  delay(50);
 }
