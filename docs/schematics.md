@@ -21,10 +21,6 @@
 |  Powered by USB / Solar Panel / Battery Pack         |
 +------------------------------------------------------+
 
-# Community Air Sensor Node — Schematic
-
-This diagram shows the high-level flow of the air monitoring node.
-
 ![Community Air Sensor Node](../schematics/schematic01.png)
 
 
@@ -43,6 +39,8 @@ This diagram shows the high-level flow of the air monitoring node.
 +------------------+                             +------------------+
 
 ![Air Quality Data Pipeline](../schematics/schematic02.png)
+
+
 📘 Schematic 3 — Public Dashboard Layout
 
 +--------------------------------------------------------------+
@@ -54,3 +52,4 @@ This diagram shows the high-level flow of the air monitoring node.
 | [ Sensor List ]           |  [ Alerts & Status ]             |
 +--------------------------------------------------------------+
 
+![Dashboard Layout](../schematics/schematic03.png)
