@@ -23,7 +23,7 @@ Unacceptable behavior includes:
 Project maintainers may take action including warnings, PR rejections, or removal
 from the project for violations of this Code of Conduct.
 
-To report issues, email: **community-air-project@protonmail.com**
+To report issues, email: **mamaofthree579@gmail.com**
 
 We are committed to reviewing all reports in a respectful and timely manner.
 
