@@ -1,25 +1,52 @@
-# Clean Air Project
-A fully open-source community air monitoring and purification initiative designed to help neighborhoods — especially low-income and industrial-burdened areas — measure, understand, and improve their indoor and outdoor air quality.
+Clean Air Project — Community Air Quality Monitoring Network
+
+The Clean Air Project is an open-source initiative that enables communities to deploy low-cost, high-accuracy air quality monitoring nodes. The system collects, processes, and shares real-time PM2.5, PM10, temperature, humidity, and VOC data.
+
+This repository provides:
+
+- Hardware build guides  
+- Wiring schematics  
+- Sensor calibration instructions  
+- Firmware source templates  
+- Cloud/server integration patterns  
+- Community training materials  
+- Logo and branding assets  
 
 ---
 
-# 🌱 Project Mission
-To empower communities with:
-- Low-cost open-source air sensors  
-- Affordable DIY air purifiers  
-- Data tools for environmental justice  
-- Clean air education and local empowerment  
+## Features
+
+- 🟢 **Modular Node Design** — ESP32-based microcontroller with swappable sensors  
+- 📡 **Multi-Path Communications** — Wi-Fi, LoRaWAN (optional), offline data buffering  
+- 📊 **Data Processing** — On-node smoothing, calibration, and timestamped batching  
+- 🌐 **Open API** — REST + MQTT ingestion formats  
+- 🧩 **Easy Assembly** — Beginner-friendly build & wiring guides  
+- 🌱 **Community-Driven** — Designed for teachers, local groups, and researchers  
 
 ---
 
-# 📦 Repository Structure
-```
-clean-air-project/
-│
-├── docs/
-│   ├── build_guide.md
-│   ├── wiring_guide.md
-│   ├── firmware_setup.md
+## Repository Structure
+
+. ├── README.md ├── docs/ │   ├── build_guide.md │   ├── wiring_guide.md │   ├── calibration_guide.md │   ├── contributing.md │   ├── api_reference.md ├── firmware/ │   ├── src_template/ │   │   ├── main.cpp │   │   ├── config.h │   │   ├── sensors.cpp │   │   ├── sensors.h │   │   ├── network.cpp │   │   ├── network.h │   └── platformio.ini ├── branding/ │   ├── logos/ │   ├── style_guide.md ├── training/ │   ├── workshop_instructor_guide.md │   ├── workshop_slides_overview.md ├── tests/ │   ├── test_plan.md └── translations/ ├── template_en.md
+
+---
+
+## License
+
+This project is released under the **MIT License**. Contributions welcome!
+
+---
+
+## How to Contribute
+
+See: `docs/contributing.md`
+
+---
+
+## Contact
+
+Questions? Want to join the community?  
+Open an Issue or email the maintainers.
 │   ├── maintenance.md
 │   ├── community_rollout.md
 │   ├── faq.md
