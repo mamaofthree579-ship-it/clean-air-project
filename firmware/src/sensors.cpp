@@ -1,57 +1,25 @@
 #include "sensors.h"
-#include <Wire.h>
-#include <Adafruit_BME280.h>
-#include <SparkFunCCS811.h>
-#include <SoftwareSerial.h>
+#include "config.h"
 
-// PMS
-SoftwareSerial pmsSerial(PMS_RX, PMS_TX);
+HardwareSerial pmsSerial(2); // UART2 on ESP32
 
-// BME280
-Adafruit_BME280 bme;
+SensorData readPMS() {
+    SensorData data = {0, 0, 0};
 
-// CCS811
-CCS811 voc;
+    pmsSerial.begin(9600, SERIAL_8N1, PMS_RX, PMS_TX);
 
-// Values
-float pm25 = 0;
-float pm10 = 0;
-float temperature = 0;
-float humidity = 0;
-int vocIndex = -1;
+    if (pmsSerial.available() > 0) {
+        if (pmsSerial.read() == 0x42) {
+            if (pmsSerial.read() == 0x4D) {
+                uint8_t buffer[30];
+                pmsSerial.readBytes(buffer, 30);
 
-void setupSensors() {
-    // PMS
-    pmsSerial.begin(9600);
-
-    // BME280
-    if (!bme.begin(0x76)) {
-        Serial.println("[ERR] BME280 not found!");
+                data.pm1_0 = (buffer[4] << 8) | buffer[5];
+                data.pm2_5 = (buffer[6] << 8) | buffer[7];
+                data.pm10  = (buffer[8] << 8) | buffer[9];
+            }
+        }
     }
 
-    // CCS811
-    if (!voc.begin()) {
-        Serial.println("[ERR] VOC sensor not found!");
-    }
-}
-
-void readSensors() {
-    // PMS frame parsing (simplified)
-    if (pmsSerial.available() > 32) {
-        uint8_t buffer[32];
-        pmsSerial.readBytes(buffer, 32);
-
-        pm25 = (buffer[12] << 8) | buffer[13];
-        pm10 = (buffer[14] << 8) | buffer[15];
-    }
-
-    // BME280
-    temperature = bme.readTemperature();
-    humidity = bme.readHumidity();
-
-    // VOC
-    if (voc.dataAvailable()) {
-        voc.readAlgorithmResults();
-        vocIndex = voc.getTVOC();
-    }
+    return data;
 }
