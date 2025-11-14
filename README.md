@@ -1,21 +1,97 @@
 # Clean Air Project
+A fully open-source community air monitoring and purification initiative designed to help neighborhoods — especially low-income and industrial-burdened areas — measure, understand, and improve their indoor and outdoor air quality.
 
-An open-source initiative to provide **low-cost air-quality monitoring**, **community alerts**, and **environmental justice data tools** for underserved or pollution-burdened regions.
+---
 
-## Features
-- DIY low-cost particulate + VOC sensor nodes  
-- Simple firmware (ESP32 / MicroPython or Arduino)  
-- Flask-based data upload API  
-- JSON/CSV data pipelines  
-- Community dashboards and alert tools  
-- Open licensing for full community use  
+# 🌱 Project Mission
+To empower communities with:
+- Low-cost open-source air sensors  
+- Affordable DIY air purifiers  
+- Data tools for environmental justice  
+- Clean air education and local empowerment  
 
-## Repository Structure
+---
 
-/src/                Firmware + API + Dashboard /docs/               Documentation + setup /schematics/         Diagrams (ASCII + PNG future) /assets/branding/    Logo + color palette + identity /data/               Sample datasets
+# 📦 Repository Structure
+```
+clean-air-project/
+│
+├── docs/
+│   ├── build_guide.md
+│   ├── wiring_guide.md
+│   ├── firmware_setup.md
+│   ├── maintenance.md
+│   ├── community_rollout.md
+│   ├── faq.md
+│   └── schematics.md
+│
+├── hardware/
+│   ├── schematics/
+│   │   └── *.png
+│   └── bom/
+│       └── bill_of_materials.csv
+│
+├── src/
+│   ├── firmware/
+│   │   ├── config.h
+│   │   ├── main.cpp
+│   │   └── libraries/
+│   └── dashboard/
+│       ├── api/
+│       └── frontend/
+│
+├── LICENSE
+└── README.md
+```
 
-## License
-MIT License — free for all community use.
+---
 
-## Contribute
-All communities, educators, engineers, and organizers are welcome.
+# 🛠 What You Can Build
+
+### 1️⃣ Community Air Sensor Node
+- PM1.0 / PM2.5 / PM10  
+- Temperature & humidity  
+- Optional VOC  
+- Wi-Fi connected  
+- Pushes data to dashboards or local servers  
+
+### 2️⃣ DIY Air Purifier
+- Based on Corsi-Rosenthal box  
+- Uses high-grade MERV filters  
+- Low-cost and highly effective  
+- Optional carbon filtration  
+
+---
+
+# 🚀 Quick Start
+
+### Build the hardware  
+See:  
+`docs/build_guide.md`
+
+### Wire everything  
+See:  
+`docs/wiring_guide.md`
+
+### Flash the firmware  
+See:  
+`docs/firmware_setup.md`
+
+### Deploy in your community  
+See:  
+`docs/community_rollout.md`
+
+---
+
+# 🔧 Contributions
+All PRs welcome.  
+Community labs, universities, schools, and environmental justice groups are especially encouraged to join.
+
+---
+
+# 📄 License
+MIT License — free to use, modify, distribute.
+
+---
+
+# 🌍 Together we build cleaner air.
