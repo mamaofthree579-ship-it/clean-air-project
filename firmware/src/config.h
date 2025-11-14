@@ -1,14 +1,22 @@
-#ifndef SENSORS_H
-#define SENSORS_H
+#ifndef CONFIG_H
+#define CONFIG_H
 
-#include <Arduino.h>
+// PMS5003 sensor pins
+#define PMS_RX 16
+#define PMS_TX 17
 
-struct SensorData {
-    int pm1_0;
-    int pm2_5;
-    int pm10;
-};
+// Status LED
+#define LED_PIN 2
 
-SensorData readPMS();
+// WiFi credentials
+#define WIFI_SSID "YOUR_WIFI_SSID"
+#define WIFI_PASSWORD "YOUR_WIFI_PASSWORD"
+
+// API endpoint
+#define API_URL "https://example.com/api/data"
+
+// Device label
+#define DEVICE_ID "airnode-01"
 
 #endif
+
