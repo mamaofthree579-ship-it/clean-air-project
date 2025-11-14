@@ -25,6 +25,6 @@ jobs:
       - name: Format check (clang-format style)
         run: |
           sudo apt-get install clang-format -y
-          find firmware/src_template -name "*.cpp" -o -name "*.h" | xargs clang-format -n || \
+          find firmware/src/ -name "*.cpp" -o -name "*.h" | xargs clang-format -n || \
             (echo "Formatting errors found!" && exit 1)
             
