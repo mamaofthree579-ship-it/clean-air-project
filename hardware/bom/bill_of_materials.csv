@@ -1,0 +1,12 @@
+Component,Model/Type,Qty,Unit Cost (USD),Total Cost,Notes
+Microcontroller,ESP32 Dev Module,1,7.50,7.50,Core board
+PM Sensor,Plantower PMS5003,1,14.00,14.00,PM1/PM2.5/PM10
+Temp/Humidity,BME280,1,4.50,4.50,Optional: SHT31
+VOC Sensor,(Optional) SGP30,1,8.00,8.00,VOC tracking
+Enclosure,IP55 Plastic Case,1,6.00,6.00,Outdoor capable
+Wires,JST 1.25mm 4-pin,2,0.50,1.00,For PMS sensor
+Fan (Purifier),20” Box Fan,1,17.00,17.00,Any brand
+Filter (Purifier),MERV 13,4,6.00,24.00,CR-box style
+Screws,M3 stainless kit,1,1.00,1.00,Mounting
+Misc.,Zip ties,10,0.05,0.50,Wire management
+Total,,,,83.00,
