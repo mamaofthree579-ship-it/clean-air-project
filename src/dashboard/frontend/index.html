@@ -1,0 +1,40 @@
+!DOCTYPE html>
+<html>
+<head>
+  <title>Clean Air Dashboard</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    .box { padding: 20px; border: 1px solid #ccc; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+
+<h1>Community Air Dashboard</h1>
+
+<div class="box">
+  <h3>Live Data</h3>
+  <p id="pm25">PM2.5: loading...</p>
+  <p id="pm10">PM10: loading...</p>
+  <p id="temp">Temp: loading...</p>
+  <p id="humidity">Humidity: loading...</p>
+</div>
+
+<script>
+  async function fetchData() {
+    const res = await fetch("/api/latest");
+    const data = await res.json();
+
+    if (!data) return;
+
+    document.getElementById("pm25").innerText = "PM2.5: " + data.pm25;
+    document.getElementById("pm10").innerText = "PM10: " + data.pm10;
+    document.getElementById("temp").innerText = "Temp: " + data.temp + "°C";
+    document.getElementById("humidity").innerText = "Humidity: " + data.humidity + "%";
+  }
+
+  setInterval(fetchData, 5000);
+  fetchData();
+</script>
+
+</body>
+</html>
