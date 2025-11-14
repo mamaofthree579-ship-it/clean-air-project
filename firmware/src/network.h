@@ -1,10 +1,13 @@
 #ifndef NETWORK_H
 #define NETWORK_H
 
-#include <Arduino.h>
 #include "sensors.h"
 
-void connectWiFi();
-void sendPayload(SensorData data);
+void initNetwork();
+bool sendData(const SensorReadings &s);
+
+#if ENABLE_OTA
+void setupOTA();
+#endif
 
 #endif
