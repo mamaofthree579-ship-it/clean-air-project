@@ -21,6 +21,13 @@
 |  Powered by USB / Solar Panel / Battery Pack         |
 +------------------------------------------------------+
 
+# Community Air Sensor Node — Schematic
+
+This diagram shows the high-level flow of the air monitoring node.
+
+![Community Air Sensor Node](../schematics/schematic01.png)
+
+
 📘 Schematic 2 — Air Quality Data Pipeline
 
 +------------------+     +------------------+     +------------------+
