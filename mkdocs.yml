@@ -1,0 +1,48 @@
+site_name: Clean Air Community Node
+site_description: Open-source air quality sensor + community network
+site_url: ""  # Fill with GitHub Pages URL after first deploy
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    - toc.integrate
+    - search.highlight
+    - search.share
+    - content.action.edit
+    - content.action.view
+  language: en
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.tabbed
+
+repo_name: Clean Air Project
+repo_url: https://github.com/USERNAME/REPO   # Replace after upload
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+  - Getting Started:
+      - Setup Guide: getting-started.md
+  - Hardware:
+      - Overview: hardware.md
+      - Schematics: schematics.md
+  - Firmware: firmware.md
+  - Cloud Services: cloud.md
+  - API Reference: api.md
+  - Community: community.md
+  
