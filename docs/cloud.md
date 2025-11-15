@@ -16,3 +16,22 @@ Nodes submit data via HTTPS REST API.
   "humidity": 55.0,
   "voc": 120
 }
+
+---
+
+Endpoints
+
+Endpoint	Method	Purpose
+
+/api/v1/submit	POST	Upload sensor data
+/api/v1/device	GET	Retrieve device info
+
+
+
+---
+
+API Keys
+
+Add your key to config.h:
+
+#define API_KEY "your-api-key"
