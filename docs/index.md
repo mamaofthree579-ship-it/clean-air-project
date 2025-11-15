@@ -1,124 +1,121 @@
-🌿 Clean Air Project
+<div class="hero">
+  <h1>Clean Air Project</h1>
+  <p>Your community-powered, open-source air-quality monitoring network.</p>
 
-Open-Source Community Air-Quality Tools for Every Neighborhood
+  <div style="margin-top: 1.8rem;">
+    <a href="getting-started/" class="md-button md-button--primary">Get Started</a>
+    <a href="hardware/build-guide/" class="md-button">Build Your Sensor</a>
+  </div>
+</div>
 
-<div align="center"> 
+---
 
-Affordable, repairable air-quality nodes — built by the community, for the community.
+## 🌍 What is the Clean Air Project?
 
-Build a Node{ .md-button .md-button--primary }
-View Hardware Schematics{ .md-button }
-GitHub Repository{ .md-button }
+The **Clean Air Project** is an open-source initiative empowering communities to build, deploy, and share **low-cost air quality sensors**.  
+Everything—from the hardware schematics to the firmware, cloud integration, and mobile dashboards—is open for anyone to use or contribute to.
+
+We are creating a global network of **community air centers** that collect high-resolution particle, gas, temperature, and humidity data for public health, research, and citizen science.
+
+---
+
+## ⭐ Key Features
+
+<div class="feature-grid">
+
+<div>
+<h3>📡 Real-Time Data</h3>
+<p>Collects and publishes PM2.5, PM10, VOC, CO₂, humidity, and temperature in real time.</p>
+</div>
+
+<div>
+<h3>🛠 Fully Open Source</h3>
+<p>Hardware files, firmware, cloud API, and dashboards — all open and community-maintained.</p>
+</div>
+
+<div>
+<h3>☁ Cloud Connected</h3>
+<p>Supports Wi-Fi MQTT, REST webhooks, ESP-NOW mesh, and local logging fallback.</p>
+</div>
+
+<div>
+<h3>📊 Powerful Dashboards</h3>
+<p>Ready-to-use Grafana and InfluxDB templates for visualizing your sensor network.</p>
+</div>
+
+<div>
+<h3>🏡 Community Air Centers</h3>
+<p>Rapidly deployable micro-stations designed for neighborhood-level coverage.</p>
+</div>
+
+<div>
+<h3>🔌 Modular Hardware</h3>
+<p>Support for PMS5003, SDS011, SGP30, BME280, ENS160, and more.</p>
+</div>
 
 </div>
----
-
-🌎 Why This Project Exists
-
-Industrial pollution, aging infrastructure, and lack of local monitoring leave many communities without access to real-time air-quality awareness.
-
-The Clean Air Project empowers people to:
-
-measure their air
-
-understand pollution patterns
-
-advocate for clean policies
-
-protect vulnerable community members
-
-
-All with open-source, low-cost hardware built from widely available components.
-
 
 ---
 
-⚙️ What You Can Build
+## 🚀 Quick Start
 
-<div class="feature-grid">🟩 Community Air Node
+Follow these simple steps to get your first Clean Air sensor online:
 
-Real-time particulate + temperature + humidity monitoring.
+### 1. Build the hardware  
+Parts list, schematics, wiring, and enclosure:  
+👉 [**Hardware Build Guide**](hardware/build-guide/)
 
-🟦 Community Air Hub
+### 2. Flash the firmware  
+Ready-to-edit PlatformIO project:  
+👉 [**Firmware Source**](https://github.com/mamaofthree579-ship-it/clean-air-project/tree/main/firmware)
 
-Collects data from local nodes and relays it to dashboards + community displays.
+### 3. Configure your Wi-Fi and cloud endpoint  
+Instructions for MQTT, HTTPS, and offline modes:  
+👉 [**Configuration Guide**](firmware/configuration/)
 
-🟧 Mapping Dashboard
+### 4. View your live data  
+Grafana dashboards + shareable public viewer:  
+👉 [**Visualization Guide**](cloud/visualization/)
 
-Beautiful geospatial maps to visualize pollution over time and space.
+---
 
-🟪 Local Data Archive
+## 🤝 Contribute
 
-Hosts air readings locally for transparency and community ownership.
+We welcome contributors of all skill levels!  
+Start with the guide below to learn how you can help improve the project:
 
+👉 [**Contributing Guide**](contributing/)
+
+---
+
+## 💚 Project Mission
+
+Clean air is a basic human right.  
+Our mission is to empower communities with the tools and knowledge to monitor and improve the air they breathe — using transparent, democratized science and open technology.
+
+---
+
+## 🔗 Useful Links
+
+- 📘 GitHub Repo  
+  https://github.com/mamaofthree579-ship-it/clean-air-project
+
+- 🛠 Hardware  
+  `docs/hardware/`
+
+- ⚙ Firmware  
+  `docs/firmware/`
+
+- ☁ Cloud & Visualizations  
+  `docs/cloud/`
+
+- 💬 Community Training  
+  `docs/community/`
+
+---
+
+<br>
+
+<div style="text-align:center; opacity: 0.8; font-size: 0.8rem;">
+  Clean Air Project — Open Source for a Healthier World
 </div>
----
-
-🚀 Quick Start
-
-1. Build your node
-
-Affordable materials, simple wiring, repairable for years.
-
-➡️ See: Build Guide
-
-
----
-
-2. Flash firmware
-
-Just connect your microcontroller and upload.
-
-➡️ See: Firmware Overview
-
-
----
-
-3. Connect to your community dashboard
-
-➡️ See: API + Data Format
-
-
----
-
-🔧 Hardware Schematics
-
-Everything you need to build, maintain, and expand the system:
-
-Air Node schematic
-
-Community Hub schematic
-
-Power + enclosure options
-
-Wiring diagrams
-
-
-➡️ Visit: Schematics
-
-
----
-
-🤝 Join the Movement
-
-Whether you’re a coder, builder, organizer, or someone who just wants cleaner air — you’re welcome here.
-
-Open community calls
-
-Training materials
-
-Submit ideas or improvements
-
-
-➡️ Become a contributor: Contributing Guide
-
-
----
-
-💚 A Project for Everyone
-
-> Clean air is a right, not a privilege.
-
-
-
-Together, we can build the tools to protect it.
