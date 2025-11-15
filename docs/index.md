@@ -83,7 +83,7 @@ Grafana dashboards + shareable public viewer:
 We welcome contributors of all skill levels!  
 Start with the guide below to learn how you can help improve the project:
 
-👉 [**Contributing Guide**](CONTRIBUTING.md)
+👉 [**Contributing Guide**](community_rollout.md)
 
 ---
 
