@@ -1,48 +1,66 @@
-site_name: Clean Air Community Node
-site_description: Open-source air quality sensor + community network
-site_url: ""  # Fill with GitHub Pages URL after first deploy
+site_name: Clean Air Project
+site_description: Open-source community air-quality toolkit — sensors, filters, firmware, and documentation.
+site_author: Clean Air Project Team
+repo_name: mamaofthree579-ship-it/clean-air-project
+repo_url: https://github.com/mamaofthree579-ship-it/clean-air-project
+
+# Where MkDocs should look for markdown files
+docs_dir: docs
+
+# Build directory for GitHub Pages output
+site_dir: site
 
 theme:
   name: material
-  palette:
-    - scheme: default
-      primary: blue
-      accent: light blue
+  logo: assets/logo.png        # remove or adjust if you do not have this yet
+  favicon: assets/favicon.png  # remove or adjust if needed
+
   features:
     - navigation.instant
-    - navigation.sections
-    - navigation.expand
+    - navigation.tracking
+    - navigation.footer
+    - navigation.top
     - content.code.copy
-    - toc.integrate
+    - content.code.select
+    - content.tabs.link
+    - search.suggest
     - search.highlight
-    - search.share
-    - content.action.edit
-    - content.action.view
-  language: en
+    - toc.integrate
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: cyan
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: cyan
+
+plugins:
+  - search
+  - tags
+  - minify:
+      minify_html: true
 
 markdown_extensions:
   - admonition
-  - footnotes
-  - codehilite
   - toc:
       permalink: true
+  - codehilite
   - pymdownx.superfences
+  - pymdownx.highlight
   - pymdownx.details
-  - pymdownx.tabbed
-
-repo_name: Clean Air Project
-repo_url: https://github.com/USERNAME/REPO  
-edit_uri: edit/main/docs/
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - Home: index.md
-  - Getting Started:
-      - Setup Guide: getting-started.md
-  - Hardware:
-      - Overview: hardware.md
-      - Schematics: schematics.md
-  - Firmware: firmware.md
-  - Cloud Services: cloud.md
-  - API Reference: api.md
-  - Community: community.md
-  
+  - Schematics: schematic.md
+  - Build Guide: build-guide.md
+  - Wiring Guide: wiring-guide.md
+  - Firmware Overview: firmware-overview.md
+  - FAQ: faq.md
