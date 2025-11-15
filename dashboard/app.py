@@ -14,8 +14,8 @@ st.set_page_config(
     layout="wide"
 )
 
-API_URL = "https://example.com/api/air"   # Replace with real endpoint
-LOCAL_FALLBACK = "dashboard/sensor_data.csv"        # Will be used if API offline
+API_URL = "https://mamaofthree579-ship-it.github.io/clean-air-project/api/air.json"
+LOCAL_FALLBACK = "dashboard/sensor_data.csv"       
 
 
 # ---------------------------------------------------------
