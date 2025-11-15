@@ -10,17 +10,30 @@ site_dir: site
 
 theme:
   name: material
-  language: en
+  logo: assets/logo-light.svg
+  favicon: assets/logo-light.svg
+  features:
+    - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.tracking
+    - content.code.copy
+    - content.tooltips
+    - content.tabs.link
+    - content.action.edit
+    - navigation.footer
+    - toc.integrate
+
   palette:
-    - scheme: default
-      primary: teal
-      accent: deep orange
-    - scheme: slate
-      primary: teal
-      accent: deep orange
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
+   - scheme: default
+     primary: teal
+     accent: light green
+   - scheme: slate
+     primary: teal
+     accent: light green
+     toggle      
+     icon: material/wweather-night
+     name: Switch to dark mode
   font:
     text: Inter
     code: JetBrains Mono
@@ -59,14 +72,14 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_generator: !!python/name:materialx.emoji.to_svg
 
+extra_css:
+  - stylesheets/extra.css
+  
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/mamaofthree579-ship-it/clean-air-project
-    - icon: material/tree
-      link: https://github.com/mamaofthree579-ship-it
-  tags:
-    enabled: true
+      name: GitHub Repository
 
 nav:
   - Home: index.md
