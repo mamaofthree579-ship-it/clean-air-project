@@ -71,11 +71,11 @@ Ready-to-edit PlatformIO project:
 
 ### 3. Configure your Wi-Fi and cloud endpoint  
 Instructions for MQTT, HTTPS, and offline modes:  
-👉 [**Configuration Guide**](firmware/configuration/)
+👉 [**Configuration Guide**](firmware/src/)
 
 ### 4. View your live data  
 Grafana dashboards + shareable public viewer:  
-👉 [**Visualization Guide**](cloud/visualization/)
+👉 [**Visualization Guide**](cloud.md)
 
 ---
 
@@ -84,7 +84,7 @@ Grafana dashboards + shareable public viewer:
 We welcome contributors of all skill levels!  
 Start with the guide below to learn how you can help improve the project:
 
-👉 [**Contributing Guide**](contributing/)
+👉 [**Contributing Guide**](contributing.md)
 
 ---
 
