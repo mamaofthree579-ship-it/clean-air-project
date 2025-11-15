@@ -12,7 +12,6 @@ theme:
 plugins:
   - search
   - tags
-  - minify
 
 markdown_extensions:
   - admonition
