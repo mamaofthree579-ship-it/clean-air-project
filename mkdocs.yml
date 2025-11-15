@@ -1,66 +1,53 @@
-site_name: Clean Air Project
-site_description: Open-source community air-quality toolkit — sensors, filters, firmware, and documentation.
-site_author: Clean Air Project Team
+site_description: Open-source community air-quality toolkit
 repo_name: mamaofthree579-ship-it/clean-air-project
 repo_url: https://github.com/mamaofthree579-ship-it/clean-air-project
 
-# Where MkDocs should look for markdown files
 docs_dir: docs
-
-# Build directory for GitHub Pages output
 site_dir: site
 
 theme:
   name: material
-  logo: assets/logo.png        # remove or adjust if you do not have this yet
-  favicon: assets/favicon.png  # remove or adjust if needed
-
+  palette:
+    - scheme: default
+      primary: teal
+      accent: cyan
+    - scheme: slate
+      primary: teal
+      accent: cyan
   features:
     - navigation.instant
-    - navigation.tracking
-    - navigation.footer
-    - navigation.top
-    - content.code.copy
-    - content.code.select
     - content.tabs.link
-    - search.suggest
-    - search.highlight
-    - toc.integrate
-
-  palette:
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: teal
-      accent: cyan
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: teal
-      accent: cyan
+    - content.code.copy
+    - content.action.edit
+    - content.action.view
 
 plugins:
   - search
-  - tags
-  - minify:
-      minify_html: true
+  - tags       # ← fully supported by Material, no external install needed
+  - minify
 
 markdown_extensions:
   - admonition
   - toc:
       permalink: true
-  - codehilite
+  - tables
+  - footnotes
   - pymdownx.superfences
-  - pymdownx.highlight
   - pymdownx.details
-  - pymdownx.tabbed:
-      alternate_style: true
-  - pymdownx.emoji
-  - pymdownx.tasklist:
-      custom_checkbox: true
+  - pymdownx.tabbed
+  - pymdownx.tasklist
+  - pymdownx.snippets
+  - pymdownx.highlight
 
 nav:
   - Home: index.md
   - Schematics: schematic.md
   - Build Guide: build-guide.md
   - Wiring Guide: wiring-guide.md
-  - Firmware Overview: firmware-overview.md
+  - Firmware:
+      - Overview: firmware-overview.md
+      - Setup: firmware-setup.md
+      - Flashing ESP32: flash-guide.md
+  - Maintenance & Troubleshooting: troubleshooting.md
   - FAQ: faq.md
+  - Contributing: contributing.md
