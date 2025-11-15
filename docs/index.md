@@ -74,7 +74,7 @@ Instructions for MQTT, HTTPS, and offline modes:
 👉 [**Configuration Guide**](calibration_guide.md)
 ### 4. View your live data  
 Grafana dashboards + shareable public viewer:  
-👉 [**Visualization Guide**](https://clean-air-project-zuzv7i9zhzhezqyueeqpyq.streamlit.app/))
+👉 [**Visualization Guide**](https://clean-air-project-zuzv7i9zhzhezqyueeqpyq.streamlit.app/)
 
 ---
 
