@@ -74,7 +74,7 @@ Instructions for MQTT, HTTPS, and offline modes:
 👉 [**Configuration Guide**](calibration_guide.md)
 ### 4. View your live data  
 Grafana dashboards + shareable public viewer:  
-👉 [**Visualization Guide**](cloud.md)
+👉 [**Visualization Guide**](dashboard/app.py)
 
 ---
 
