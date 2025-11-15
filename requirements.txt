@@ -1,0 +1,26 @@
+Core tools
+platformio==6.1.15
+esptool==4.7.0
+
+# JSON and data handling
+requests==2.32.3
+urllib3==2.2.2
+pydantic==2.7.1
+
+# Optional: Data processing & analytics
+numpy==1.26.4
+pandas==2.2.2
+
+# Optional: Plotting for sensor analytics or dashboards
+matplotlib==3.8.4
+
+# For cloud integrations (MQTT, API testing)
+paho-mqtt==2.1.0
+fastapi==0.111.0
+uvicorn==0.30.1
+
+# GitHub workflows / automation scripts
+pyyaml==6.0.1
+
+# Helpful debugging tools
+pyserial==3.5
