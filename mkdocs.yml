@@ -1,13 +1,40 @@
 site_name: Clean Air Project
 site_description: Open-source community air-quality toolkit
+site_url: https://mamaofthree579-ship-it.github.io/clean-air-project
 repo_name: mamaofthree579-ship-it/clean-air-project
 repo_url: https://github.com/mamaofthree579-ship-it/clean-air-project
+copyright: "© 2025 Clean Air Project – Open Source Community"
 
 docs_dir: docs
 site_dir: site
 
 theme:
   name: material
+  language: en
+  palette:
+    - scheme: default
+      primary: teal
+      accent: deep orange
+    - scheme: slate
+      primary: teal
+      accent: deep orange
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+  font:
+    text: Inter
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - content.code.copy
+    - content.tabs.link
+    - content.action.edit
+    - toc.integrate
+    - header.autohide
+    - navigation.expand
+    - search.suggest
+    - search.highlight
 
 plugins:
   - search
@@ -19,11 +46,43 @@ markdown_extensions:
       permalink: true
   - tables
   - footnotes
+  - def_list
+  - attr_list
+  - md_in_html
   - pymdownx.superfences
   - pymdownx.details
-  - pymdownx.tabbed
-  - pymdownx.tasklist
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - pymdownx.highlight
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/mamaofthree579-ship-it/clean-air-project
+    - icon: material/tree
+      link: https://github.com/mamaofthree579-ship-it
+  tags:
+    enabled: true
 
 nav:
   - Home: index.md
+  - Quick Start:
+      - Build Your Node: build-guide.md
+      - Wiring Guide: wiring-guide.md
+  - Firmware:
+      - Overview: firmware-overview.md
+      - Configuration: config.md
+  - Hardware Schematics:
+      - All Schematics: schematics.md
+  - Data & APIs:
+      - API Guide: api.md
+      - Data Format: data-format.md
+  - Community:
+      - Contributor Guide: contributing.md
+      - Code of Conduct: code-of-conduct.md
+      - FAQ: faq.md
+      - Training Materials: training.md
