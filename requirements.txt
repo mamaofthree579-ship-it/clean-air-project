@@ -1,3 +1,5 @@
+plotly.express
+
 Core tools
 platformio==6.1.15
 esptool==4.7.0
