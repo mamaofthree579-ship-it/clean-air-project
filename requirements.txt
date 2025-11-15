@@ -1,5 +1,8 @@
+streamlit 
+pandas
+numpy
 plotly
-plotly.express
+requests
 
 Core tools
 platformio==6.1.15
