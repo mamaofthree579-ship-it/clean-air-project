@@ -3,8 +3,7 @@
   <p>Your community-powered, open-source air-quality monitoring network.</p>
 
   <div style="margin-top: 1.8rem;">
-    <button onclick="location.href='/docs/getting-started.md'">Geg Started</button>
-    <a href="/docs/getting-started.md"class="button-class">Get Started</a>
+    <a href="/clean-air-project/docs/getting-started.md/"class="button-class">Get Started</a>
     <a href="/hardware/build_guide.md"class="button-class">Build Your Sensor</a>
   </div>
 </div>
