@@ -1,3 +1,4 @@
+site_name: Clean Air Project
 site_description: Open-source community air-quality toolkit
 repo_name: mamaofthree579-ship-it/clean-air-project
 repo_url: https://github.com/mamaofthree579-ship-it/clean-air-project
@@ -7,23 +8,10 @@ site_dir: site
 
 theme:
   name: material
-  palette:
-    - scheme: default
-      primary: teal
-      accent: cyan
-    - scheme: slate
-      primary: teal
-      accent: cyan
-  features:
-    - navigation.instant
-    - content.tabs.link
-    - content.code.copy
-    - content.action.edit
-    - content.action.view
 
 plugins:
   - search
-  - tags       # ← fully supported by Material, no external install needed
+  - tags
   - minify
 
 markdown_extensions:
@@ -36,18 +24,7 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.tasklist
-  - pymdownx.snippets
   - pymdownx.highlight
 
 nav:
   - Home: index.md
-  - Schematics: schematic.md
-  - Build Guide: build-guide.md
-  - Wiring Guide: wiring-guide.md
-  - Firmware:
-      - Overview: firmware-overview.md
-      - Setup: firmware-setup.md
-      - Flashing ESP32: flash-guide.md
-  - Maintenance & Troubleshooting: troubleshooting.md
-  - FAQ: faq.md
-  - Contributing: contributing.md
