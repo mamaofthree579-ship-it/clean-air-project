@@ -25,22 +25,20 @@ LOCAL_FALLBACK = "dashboard/sensor_data.csv"
 def load_air_data():
     try:
         resp = requests.get(API_URL, timeout=5)
-     if response.status_code == 
-200:
+        resp.raise_for_status()
         data = resp.json()
 
-        records = data["data"]
         df = pd.DataFrame(data)
         df["timestamp"] = pd.to_datetime(df["timestamp"])
         return df, "Live API"
     except:
-        # fallback to CSV
+        # Fallback: local data file
         try:
             df = pd.read_csv(LOCAL_FALLBACK)
             df["timestamp"] = pd.to_datetime(df["timestamp"])
             return df, "Local CSV"
         except:
-            return pd.read_csv("sensor_data.csv")
+            return None, "No Data Available"
 
 # ---------------------------------------------------------
 # AQI CALCULATION (Basic PM2.5 EPA formula)
@@ -68,7 +66,7 @@ refresh = st.sidebar.button("🔄 Refresh Data")
 # ---------------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------------
-df, source = load_air_data()
+df, source = load_air_data(api/air.json)
 
 if df is None:
     st.error("No sensor data available. Add a CSV or connect an API endpoint.")
