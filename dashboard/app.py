@@ -39,7 +39,7 @@ def load_air_data():
             df["timestamp"] = pd.to_datetime(df["timestamp"])
             return df, "Local CSV"
         except:
-            return None, "No Data Available"
+            return pd.read_csv("sensor_data.csv")
 
 # ---------------------------------------------------------
 # AQI CALCULATION (Basic PM2.5 EPA formula)
