@@ -25,14 +25,15 @@ LOCAL_FALLBACK = "dashboard/sensor_data.csv"
 def load_air_data():
     try:
         resp = requests.get(API_URL, timeout=5)
-        resp.raise_for_status()
+        if response.status_code == 200:
         data = resp.json()
 
+        records = data["data"]
         df = pd.DataFrame(data)
         df["timestamp"] = pd.to_datetime(df["timestamp"])
         return df, "Live API"
     except:
-        # Fallback: local data file
+        # fallback to CSV
         try:
             df = pd.read_csv(LOCAL_FALLBACK)
             df["timestamp"] = pd.to_datetime(df["timestamp"])
