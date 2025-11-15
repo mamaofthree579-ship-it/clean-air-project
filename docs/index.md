@@ -1,36 +1,124 @@
-Clean Air Community Node
+🌿 Clean Air Project
 
-An open-source environmental sensor platform measuring:
+Open-Source Community Air-Quality Tools for Every Neighborhood
 
-- PM1 / PM2.5 / PM10  
-- Temperature  
-- Humidity  
-- VOCs / Air Quality Index  
-- Optional CO₂  
-- Optional GPS  
+<div align="center"> 
 
-This project includes:
+Affordable, repairable air-quality nodes — built by the community, for the community.
 
-- Hardware schematics  
-- Firmware (ESP32 / PlatformIO)  
-- Cloud API integration  
-- Community training resources  
-- Maintenance & deployment support  
+Build a Node{ .md-button .md-button--primary }
+View Hardware Schematics{ .md-button }
+GitHub Repository{ .md-button }
+
+</div>
+---
+
+🌎 Why This Project Exists
+
+Industrial pollution, aging infrastructure, and lack of local monitoring leave many communities without access to real-time air-quality awareness.
+
+The Clean Air Project empowers people to:
+
+measure their air
+
+understand pollution patterns
+
+advocate for clean policies
+
+protect vulnerable community members
+
+
+All with open-source, low-cost hardware built from widely available components.
+
 
 ---
 
-## Why This Project Exists
+⚙️ What You Can Build
 
-Communities deserve access to **real-time, trustworthy air quality data**.  
-This project enables individuals, neighborhoods, and organizations to deploy independent, open-data sensors.
+<div class="feature-grid">🟩 Community Air Node
+
+Real-time particulate + temperature + humidity monitoring.
+
+🟦 Community Air Hub
+
+Collects data from local nodes and relays it to dashboards + community displays.
+
+🟧 Mapping Dashboard
+
+Beautiful geospatial maps to visualize pollution over time and space.
+
+🟪 Local Data Archive
+
+Hosts air readings locally for transparency and community ownership.
+
+</div>
+---
+
+🚀 Quick Start
+
+1. Build your node
+
+Affordable materials, simple wiring, repairable for years.
+
+➡️ See: Build Guide
+
 
 ---
 
-## Quick Links
+2. Flash firmware
 
-- [Getting Started](getting-started.md)
-- [Hardware Overview](hardware.md)
-- [Firmware Guide](firmware.md)
-- [Schematics](schematics.md)
-- [API Reference](api.md)
+Just connect your microcontroller and upload.
 
+➡️ See: Firmware Overview
+
+
+---
+
+3. Connect to your community dashboard
+
+➡️ See: API + Data Format
+
+
+---
+
+🔧 Hardware Schematics
+
+Everything you need to build, maintain, and expand the system:
+
+Air Node schematic
+
+Community Hub schematic
+
+Power + enclosure options
+
+Wiring diagrams
+
+
+➡️ Visit: Schematics
+
+
+---
+
+🤝 Join the Movement
+
+Whether you’re a coder, builder, organizer, or someone who just wants cleaner air — you’re welcome here.
+
+Open community calls
+
+Training materials
+
+Submit ideas or improvements
+
+
+➡️ Become a contributor: Contributing Guide
+
+
+---
+
+💚 A Project for Everyone
+
+> Clean air is a right, not a privilege.
+
+
+
+Together, we can build the tools to protect it.
