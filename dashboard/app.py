@@ -22,20 +22,23 @@ LOCAL_FALLBACK = "dashboard/sensor_data.csv"
 # LOAD DATA FUNCTION
 # ---------------------------------------------------------
 @st.cache_data(ttl=300)  # Cache for 5 minutes
-def load_data():
+def load_air_data():
     try:
-        response = requests.get(API_URL, timeout=5)
-        if response.status_code == 200:
-            data = response.json()
-            records = data["data"]
-            df = pd.DataFrame(records)
+        resp = requests.get(API_URL, timeout=5)
+        resp.raise_for_status()
+        data = resp.json()
+
+        df = pd.DataFrame(data)
+        df["timestamp"] = pd.to_datetime(df["timestamp"])
+        return df, "Live API"
+    except:
+        # Fallback: local data file
+        try:
+            df = pd.read_csv(LOCAL_FALLBACK)
             df["timestamp"] = pd.to_datetime(df["timestamp"])
-            return df
-    except Exception:
-        pass  # fallback to CSV
-
-    return pd.read_csv("sensor_data.csv")
-
+            return df, "Local CSV"
+        except:
+            return None, "No Data Available"
 
 # ---------------------------------------------------------
 # AQI CALCULATION (Basic PM2.5 EPA formula)
