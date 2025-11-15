@@ -25,7 +25,8 @@ LOCAL_FALLBACK = "dashboard/sensor_data.csv"
 def load_air_data():
     try:
         resp = requests.get(API_URL, timeout=5)
-     if response.status_code == 200:
+     if response.status_code == 
+200:
         data = resp.json()
 
         records = data["data"]
