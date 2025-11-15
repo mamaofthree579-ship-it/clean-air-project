@@ -63,7 +63,7 @@ Follow these simple steps to get your first Clean Air sensor online:
 
 ### 1. Build the hardware  
 Parts list, schematics, wiring, and enclosure:  
-👉 [**Hardware Build Guide**](hardware/build-guide/)
+👉 [**Hardware Build Guide**](hardware/build-guide.md)
 
 ### 2. Flash the firmware  
 Ready-to-edit PlatformIO project:  
