@@ -39,7 +39,7 @@ theme:
 
 plugins:
   - search
-  - tags
+  - awesome-tags
   - minify:
       minify_html: true
 
