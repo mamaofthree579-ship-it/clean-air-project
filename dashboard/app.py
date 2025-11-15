@@ -66,7 +66,7 @@ refresh = st.sidebar.button("🔄 Refresh Data")
 # ---------------------------------------------------------
 # LOAD DATA
 # ---------------------------------------------------------
-df, source = load_air_data(api/air.json)
+df, source = load_air_data(air.json)
 
 if df is None:
     st.error("No sensor data available. Add a CSV or connect an API endpoint.")
