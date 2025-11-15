@@ -84,11 +84,11 @@ extra:
 nav:
   - Home: index.md
   - Quick Start:
-      - Build Your Node: build-guide.md
-      - Wiring Guide: wiring-guide.md
+      - Build Your Node: hardware/build_guide.md
+      - Wiring Guide: wiring_guide.md
   - Firmware:
-      - Overview: firmware-overview.md
-      - Configuration: config.md
+      - Overview: firmware_setup.md
+      - Configuration: calibration_guide.md
       - Dashboard: https://share.streamlit.io/YOUR_APP_URL
   - API:
       - Live JSON Feed: api/air.json
@@ -98,8 +98,8 @@ nav:
       - API Guide: api.md
       - Data Format: data-format.md
   - Community:
-      - Contributor Guide: contributing.md
+      - Contributor Guide: community_rollout.md
       - Code of Conduct: code-of-conduct.md
       - FAQ: faq.md
-      - Training Materials: training.md
+      - Training Materials: community/training/workshop_instructor_guide.md
       
