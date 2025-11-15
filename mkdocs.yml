@@ -89,6 +89,9 @@ nav:
   - Firmware:
       - Overview: firmware-overview.md
       - Configuration: config.md
+      - Dashboard: https://share.streamlit.io/YOUR_APP_URL
+  - API:
+      - Live JSON Feed: api/air.json
   - Hardware Schematics:
       - All Schematics: schematics.md
   - Data & APIs:
@@ -99,3 +102,4 @@ nav:
       - Code of Conduct: code-of-conduct.md
       - FAQ: faq.md
       - Training Materials: training.md
+      
