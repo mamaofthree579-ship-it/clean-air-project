@@ -89,9 +89,7 @@ nav:
   - Firmware:
       - Overview: firmware_setup.md
       - Configuration: calibration_guide.md
-      - Dashboard: https://share.streamlit.io/YOUR_APP_URL
-  - API:
-      - Live JSON Feed: api/air.json
+      - Dashboard: https://clean-air-project-zuzv7i9zhzhezqyueeqpyq.streamlit.app/
   - Hardware Schematics:
       - All Schematics: schematics.md
   - Data & APIs:
