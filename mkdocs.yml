@@ -31,7 +31,7 @@ theme:
    - scheme: slate
      primary: teal
      accent: light green
-     toggle      
+     toggle:      
      icon: material/wweather-night
      name: Switch to dark mode
   font:
