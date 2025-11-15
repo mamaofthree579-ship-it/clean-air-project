@@ -31,7 +31,7 @@ markdown_extensions:
   - pymdownx.tabbed
 
 repo_name: Clean Air Project
-repo_url: https://github.com/USERNAME/REPO   # Replace after upload
+repo_url: https://github.com/USERNAME/REPO  
 edit_uri: edit/main/docs/
 
 nav:
