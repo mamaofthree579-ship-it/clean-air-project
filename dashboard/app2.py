@@ -104,7 +104,6 @@ st.success("Dashboard loaded successfully!")
 #----------------------------
 # THREE-D HEATMAP
 #----------------------------
-!-- tools/cesium_starter.html -->
 <!doctype html>
 <html>
 <head>
