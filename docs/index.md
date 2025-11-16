@@ -2,7 +2,7 @@
   <h1>Clean Air Project</h1>
   <p>Your community-powered, open-source air-quality monitoring network.</p>
 
-  div style="margin-top: 1.8rem;">
+  <div style="margin-top: 1.8rem;">
   <a href="getting-started/" class="md-button md-button--primary">Get Started</a>
   <a href="hardware/build-guide/" class="md-button">Build Your Sensor</a>
 </div>
