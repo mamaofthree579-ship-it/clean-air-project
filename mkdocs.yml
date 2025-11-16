@@ -92,7 +92,7 @@ nav:
       - All Schematics: schematics.md
   - Data & APIs:
       - API Guide: api.md
-      - Data Format: data-format.md
+      - Data Pipeline: data_pipeline.md
   - Community:
       - Contributor Guide: CONTRIBUTING.md
       - Code of Conduct: CODE_OF_CONDUCT.md
