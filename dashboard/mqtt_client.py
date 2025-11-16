@@ -1,4 +1,3 @@
-dashboard/mqtt_client.py
 import threading
 import json
 import time
