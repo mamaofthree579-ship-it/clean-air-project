@@ -78,6 +78,7 @@ Instructions for MQTT, HTTPS, and offline modes:
 Grafana dashboards + shareable public viewer:  
 👉 [**Visualization Guide**](https://clean-air-project-zuzv7i9zhzhezqyueeqpyq.streamlit.app/)
 
+👉 [**Data Collection**](api/air.json)
 ---
 
 ## 🤝 Contribute
