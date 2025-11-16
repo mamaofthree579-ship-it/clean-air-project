@@ -61,6 +61,8 @@ We are creating a global network of **community air centers** that collect high-
 
 Follow these simple steps to get your first Clean Air sensor online:
 
+👉 [**Get Started**](getting-started.md)
+
 ### 1. Build the hardware  
 Parts list, schematics, wiring, and enclosure:  
 👉 [**Hardware Build Guide**](hardware/build_guide.md)
