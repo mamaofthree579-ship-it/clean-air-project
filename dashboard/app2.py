@@ -100,22 +100,3 @@ else:
     st.map(df[['lat', 'lon']])
 
 st.success("Dashboard loaded successfully!")
-
-#----------------------------
-# THREE-D HEATMAP
-#----------------------------
-<!doctype html>
-<html>
-<head>
-  <title>Clean Air ThreeD</title>
-  <script src="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Cesium.js"></script>
-  <link href="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-</head>
-<body>
-  <div id="cesiumContainer" style="width:100%;height:100vh;"></div>
-  <script>
-    const viewer = new Cesium.Viewer('cesiumContainer', {terrainProvider: Cesium.createWorldTerrain()});
-    // load your points from JSON (fetch('/api/air.json')) and create entities
-  </script>
-</body>
-</html>
