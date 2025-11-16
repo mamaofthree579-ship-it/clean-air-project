@@ -4,7 +4,7 @@
 
   <div style="margin-top: 1.8rem;">
   <a href="getting-started.md/" class="md-button">Get Started</a>
-  <a href="[hardware/build_guide.md](https://mamaofthree579-ship-it.github.io/clean-air-project/hardware/build_guide/)class="md-button">Build Your Sensor</a>
+  <a href="https://mamaofthree579-ship-it.github.io/clean-air-project/hardware/build_guide/"class="md-button">Build Your Sensor</a>
   </div>
 </div>
 
