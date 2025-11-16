@@ -1,156 +1,118 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
-import plotly.express as px
-import requests
-from datetime import datetime, timedelta
+import json
+import random
+import time
+from pathlib import Path
 
-# ---------------------------------------------------------
-# CONFIG
-# ---------------------------------------------------------
 st.set_page_config(
     page_title="Clean Air Project Dashboard",
-    page_icon="🫁",
     layout="wide"
 )
 
-API_URL = "https://mamaofthree579-ship-it.github.io/clean-air-project/api/air.json"
-LOCAL_FALLBACK = "dashboard/sensor_data.csv"       
+DATA_FILE = Path("demo_data.json")
 
 
-# ---------------------------------------------------------
-# LOAD DATA FUNCTION
-# ---------------------------------------------------------
-@st.cache_data(ttl=300)  # Cache for 5 minutes
-def load_air_data():
-    try:
-        resp = requests.get(API_URL, timeout=5)
-        resp.raise_for_status()
-        data = resp.json()
-
-        df = pd.DataFrame(data)
-        df["timestamp"] = pd.to_datetime(df["timestamp"])
-        return df, "Live API"
-    except:
-        # Fallback: local data file
-        try:
-            df = pd.read_csv(LOCAL_FALLBACK)
-            df["timestamp"] = pd.to_datetime(df["timestamp"])
-            return df, "Local CSV"
-        except:
-            return None, "No Data Available"
-
-# ---------------------------------------------------------
-# AQI CALCULATION (Basic PM2.5 EPA formula)
-# ---------------------------------------------------------
-def calculate_aqi(pm25):
-    if pm25 <= 12:
-        return 50 * pm25 / 12
-    elif pm25 <= 35.4:
-        return 50 + (pm25 - 12) * (50 / 23.4)
-    elif pm25 <= 55.4:
-        return 100 + (pm25 - 35.4) * (50 / 20)
-    else:
-        return 200  # simplified for upper range
+# ---------------------------
+#  Create Local Demo Data File
+# ---------------------------
+def initialize_demo_data():
+    """Create demo dataset if missing."""
+    if not DATA_FILE.exists():
+        demo = {
+            "pm1_0": 3,
+            "pm2_5": 5,
+            "pm10": 8,
+            "temperature": 22.1,
+            "humidity": 41.5,
+            "devices_online": 1
+        }
+        with open(DATA_FILE, "w") as f:
+            json.dump(demo, f)
 
 
-# ---------------------------------------------------------
-# SIDEBAR
-# ---------------------------------------------------------
-st.sidebar.title("🫁 Clean Air Project")
-st.sidebar.markdown("Community Air Quality Dashboard\n— *Live or Cached Data*")
-
-refresh = st.sidebar.button("🔄 Refresh Data")
-
-
-# ---------------------------------------------------------
-# LOAD DATA
-# ---------------------------------------------------------
-df, source = load_air_data()
-
-if df is None:
-    st.error("No sensor data available. Add a CSV or connect an API endpoint.")
-    st.stop()
-
-df["AQI"] = df["pm25"].apply(calculate_aqi)
+# ---------------------------
+#  Load Demo Data
+# ---------------------------
+def load_data():
+    with open(DATA_FILE, "r") as f:
+        return json.load(f)
 
 
-# ---------------------------------------------------------
-# HEADER
-# ---------------------------------------------------------
-st.title("🫁 Clean Air Project — Community Air Quality Dashboard")
-st.caption(f"Data Source: **{source}** — Last Updated: {datetime.now():%Y-%m-%d %H:%M:%S}")
+# ---------------------------
+#  Simulate Updating Values
+# ---------------------------
+def simulate_update():
+    data = load_data()
+
+    def fluctuate(value, min_val, max_val):
+        return max(min_val, min(max_val, value + random.uniform(-1, 1)))
+
+    data["pm1_0"] = fluctuate(data["pm1_0"], 0, 50)
+    data["pm2_5"] = fluctuate(data["pm2_5"], 0, 100)
+    data["pm10"] = fluctuate(data["pm10"], 0, 150)
+    data["temperature"] = fluctuate(data["temperature"], 15, 35)
+    data["humidity"] = fluctuate(data["humidity"], 20, 80)
+    data["devices_online"] = 1  # static for demo
+
+    with open(DATA_FILE, "w") as f:
+        json.dump(data, f)
+
+    return data
 
 
-# ---------------------------------------------------------
-# TOP METRICS
-# ---------------------------------------------------------
-latest = df.sort_values("timestamp").iloc[-1]
-
-col1, col2, col3 = st.columns(3)
-
-col1.metric("PM2.5 (µg/m³)", f"{latest.pm25:.1f}")
-col2.metric("Temperature (°C)", f"{latest.temperature:.1f}")
-col3.metric("AQI", f"{latest.AQI:.0f}")
+# ---------------------------
+#  UI Layout
+# ---------------------------
+st.title("🌍 Clean Air Project — Demo Dashboard")
+st.subheader("Offline Version (Simulated Sensor Data)")
 
 
-# ---------------------------------------------------------
-# AQI Gauge Chart
-# ---------------------------------------------------------
-fig_gauge = px.scatter(
-    x=[0], y=[latest.AQI],
-    range_y=[0, 200],
-    title="AQI Gauge",
-)
-fig_gauge.update_layout(height=200, showlegend=False)
-st.plotly_chart(fig_gauge, use_container_width=True)
+# Initialize data if missing
+initialize_demo_data()
 
+# Auto-update toggle
+refresh = st.checkbox("Simulate Live Updates", value=True)
 
-# ---------------------------------------------------------
-# TIME SERIES
-# ---------------------------------------------------------
-st.subheader("📈 Air Quality Over Time")
-
-fig_ts = px.line(
-    df,
-    x="timestamp",
-    y="pm25",
-    markers=True,
-    title="PM2.5 Levels Over Time",
-)
-st.plotly_chart(fig_ts, use_container_width=True)
-
-
-# ---------------------------------------------------------
-# MAP (If GPS data exists)
-# ---------------------------------------------------------
-if "lat" in df.columns and "lon" in df.columns:
-    st.subheader("🗺️ Sensor Map")
-    st.map(df[["lat", "lon"]])
+if refresh:
+    data = simulate_update()
 else:
-    st.info("No GPS coordinates found; skipping map.")
+    data = load_data()
 
 
-# ---------------------------------------------------------
-# DEVICE STATUS TABLE
-# ---------------------------------------------------------
-st.subheader("📟 Device Status")
+# ---------------------------
+#  Display Metric Cards
+# ---------------------------
+col1, col2, col3, col4, col5 = st.columns(5)
 
-device_cols = [c for c in df.columns if c not in ["pm25", "temperature", "timestamp", "AQI"]]
+col1.metric("PM1.0 (µg/m³)", round(data["pm1_0"], 1))
+col2.metric("PM2.5 (µg/m³)", round(data["pm2_5"], 1))
+col3.metric("PM10 (µg/m³)", round(data["pm10"], 1))
+col4.metric("Temperature (°C)", round(data["temperature"], 1))
+col5.metric("Humidity (%)", round(data["humidity"], 1))
 
-if device_cols:
-    st.dataframe(df[["timestamp", "pm25", "temperature"] + device_cols].tail(20))
-else:
-    st.dataframe(df.tail(20))
+st.divider()
 
+# ---------------------------
+#  Graph (Historical Simulation)
+# ---------------------------
+st.subheader("Simulated Real-Time Chart")
 
-# ---------------------------------------------------------
-# RAW DATA DOWNLOAD
-# ---------------------------------------------------------
-st.subheader("⬇ Download Data")
-st.download_button(
-    label="Download CSV",
-    data=df.to_csv(index=False),
-    file_name="air_quality_data.csv",
-    mime="text/csv",
-)
+# Add fake history
+if "history" not in st.session_state:
+    st.session_state.history = []
+
+st.session_state.history.append([
+    data["pm1_0"],
+    data["pm2_5"],
+    data["pm10"]
+])
+
+df = pd.DataFrame(st.session_state.history, columns=["PM1.0", "PM2.5", "PM10"])
+
+st.line_chart(df)
+
+# Auto-refresh every 2 seconds
+if refresh:
+    time.sleep(2)
+    st.experimental_rerun()
