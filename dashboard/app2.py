@@ -108,7 +108,7 @@ st.success("Dashboard loaded successfully!")
 <!doctype html>
 <html>
 <head>
-  <title>Clean Air 3D</title>
+  <title>Clean Air ThreeD</title>
   <script src="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Cesium.js"></script>
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.115/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 </head>
