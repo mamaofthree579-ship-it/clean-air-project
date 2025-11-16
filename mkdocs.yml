@@ -8,8 +8,8 @@ site_dir: site
 
 theme:
   name: material
-  logo: assets/logo-light.svg
-  favicon: assets/logo-light.svg
+  logo: assets/logo-dark.svg
+  favicon: assets/logo-dark.svg
   features:
     - navigation.top
     - navigation.sections
