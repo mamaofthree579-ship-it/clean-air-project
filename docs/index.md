@@ -3,8 +3,8 @@
   <p>Your community-powered, open-source air-quality monitoring network.</p>
 
   <div style="margin-top: 1.8rem;">
-  <a href="getting-started/" class="md-button md-button--primary">Get Started</a>
-  <a href="hardware/build-guide/" class="md-button">Build Your Sensor</a>
+  <a href="getting-started.md/" class="md-button md-button--primary">Get Started</a>
+  <a href="hardware/build-guide.md/" class="md-button">Build Your Sensor</a>
 </div>
 
 
