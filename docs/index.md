@@ -4,7 +4,7 @@
 
   <div style="margin-top: 1.8rem;">
   <a href="getting-started.md/" class="md-button md-button--primary">Get Started</a>
-  <a href="hardware/build-guide.md/" class="md-button--primary">Build Your Sensor</a>
+  <a href="hardware/build-guide.md/" class="md-button">Build Your Sensor</a>
   </div>
 </div>
 
