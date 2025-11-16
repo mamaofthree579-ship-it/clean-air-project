@@ -94,8 +94,8 @@ nav:
       - API Guide: api.md
       - Data Format: data-format.md
   - Community:
-      - Contributor Guide: community_rollout.md
-      - Code of Conduct: code-of-conduct.md
+      - Contributor Guide: CONTRIBUTING.md
+      - Code of Conduct: CODE_OF_CONDUCT.md
       - FAQ: faq.md
-      - Training Materials: community/training/workshop_instructor_guide.md
+      - Training Materials: community/COMMUNITY_GUIDE.md
       
