@@ -115,4 +115,4 @@ st.line_chart(df)
 # Auto-refresh every 2 seconds
 if refresh:
     time.sleep(2)
-    st.experimental_rerun()
+    st.rerun()
