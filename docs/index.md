@@ -3,7 +3,7 @@
   <p>Your community-powered, open-source air-quality monitoring network.</p>
 
   <div style="margin-top: 1.8rem;">
-  <a href="getting-started.md/" class="md-button">Get Started</a>
+  <a href="https://mamaofthree579-ship-it.github.io/clean-air-project/docs/getting-started/"class="md-button">Get Started</a>
   <a href="https://mamaofthree579-ship-it.github.io/clean-air-project/hardware/build_guide/"class="md-button">Build Your Sensor</a>
   </div>
 </div>
