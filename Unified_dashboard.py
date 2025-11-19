@@ -8,7 +8,6 @@ import requests
 import streamlit as st
 import pandas as pd
 import numpy as np
-import markdown2
 
 # ----------------------------
 # CONFIG
