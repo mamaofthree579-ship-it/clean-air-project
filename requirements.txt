@@ -2,7 +2,6 @@ mkdocs
 mkdocs-material
 pymdown-extensions
 mkdocs-minify-plugin
-
 streamlit 
 pandas
 numpy
