@@ -1,0 +1,5 @@
+<!-- tools/green_tools/icons/oak.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 64 64">
+  <circle cx="32" cy="24" r="18" fill="#2b8cbe"/>
+  <rect x="28" y="30" width="8" height="22" fill="#7b3f00"/>
+</svg>
