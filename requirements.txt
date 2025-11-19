@@ -4,7 +4,9 @@ numpy
 plotly
 requests
 python-dotenv
-foliums
+folium
+matplotlib 
+streamlit-folium
 mkdocs
 mkdocs-material
 pymdown-extensions
