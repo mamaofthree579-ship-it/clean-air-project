@@ -1,0 +1,19 @@
+species,common_name,canopy_diameter_m,leaf_area_index,pm2_5_removal_g_m2_yr,co2_uptake_kg_tree_yr,ozone_removal_g_tree_yr,no2_removal_g_tree_yr,so2_removal_g_tree_yr,establish_cost_usd,annual_maintenance_usd,icon
+quercus_robur,English Oak,12,4.5,0.85,21,1.2,0.8,0.6,250,35,oak
+platanus_x_hispanica,London Plane,14,5.0,1.05,31,1.6,1.1,0.9,280,45,plane
+tilia_cordata,Lime / Linden,10,3.8,0.65,18,0.9,0.6,0.5,200,30,linden
+acer_campestre,Field Maple,8,3.0,0.45,12,0.6,0.4,0.3,180,28,maple
+morus_alba,White Mulberry,6,2.5,0.35,10,0.4,0.3,0.2,140,22,mulberry
+acer_palmatum,Japanese Maple,4,2.1,0.15,5,0.1,0.08,0.05,120,20,jmaple
+betula_pendula,Silver Birch,9,3.2,0.5,15,0.7,0.45,0.35,190,30,birch
+prunus_serrulata,Cherry Blossom,5,2.0,0.2,6,0.08,0.05,0.03,160,25,cherry
+
+Notes:
+
+pm2_5_removal_g_m2_yr = grams PM2.5 removed per m² leaf surface per year (approximate).
+
+co2_uptake_kg_tree_yr = mean CO₂ sequestration kg/tree/yr.
+
+Other pollutant columns are per-tree per-year approximate removal mass (g/yr).
+
+icon ties to the SVG icons provided below.
