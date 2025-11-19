@@ -8,4 +8,4 @@ numpy
 plotly==5.22.0
 requests
 foliums
-plotly.express
+plotly-express
