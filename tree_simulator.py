@@ -79,3 +79,6 @@ with st.expander("📘 How This Works"):
     - Canopy coverage directly changes neighborhood pollutant concentrations.  
     - This simulator is not a replacement for i-Tree Eco or i-Tree Planting, but a friendly educational tool.
     """)
+    
+print(df.head())
+print(df.columns)
