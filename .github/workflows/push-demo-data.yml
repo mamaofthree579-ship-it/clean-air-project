@@ -1,25 +1,50 @@
-name: Push Demo Air Quality Data
+name: Push Demo Data
 
 on:
-  schedule:
-    - cron: "0 * * * *"   # every hour
-  workflow_dispatch: {}
+  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  send-demo:
+  push-demo:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Send fake sensor reading
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Prepare demo payload
+        id: prep
         run: |
-          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
-          curl -X POST "https://YOUR_API_URL_HERE/api/data" \
+          echo "Creating sample payload..."
+          cat <<EOF > demo_payload.json
+          {
+            "device_id": "demo-device-001",
+            "pm25": 12.3,
+            "pm10": 20.5,
+            "temperature": 23.1,
+            "humidity": 48.2,
+            "lat": 36.174465,
+            "lon": -86.767960,
+            "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+          }
+          EOF
+
+      - name: Show payload
+        run: cat demo_payload.json
+
+      - name: Send demo payload to API
+        env:
+          API_URL: ${{ secrets.DEMO_API_URL }}
+        run: |
+          if [ -z "$API_URL" ]; then
+            echo "ERROR: DEMO_API_URL secret not set."
+            exit 1
+          fi
+
+          echo "Sending payload to: $API_URL"
+          curl -X POST "$API_URL" \
             -H "Content-Type: application/json" \
-            -d "{
-              \"timestamp\": \"$TIMESTAMP\",
-              \"pm25\": 45,
-              \"temperature\": 23.4,
-              \"humidity\": 55.2,
-              \"lat\": 37.7749,
-              \"lon\": -122.4194
-            }"
+            --data @demo_payload.json \
+            -w "\nHTTP Status: %{http_code}\n"
