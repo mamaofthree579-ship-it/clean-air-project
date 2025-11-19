@@ -1,0 +1,29 @@
+name: Push Tree Demo Sensor Reading
+
+on:
+  schedule:
+    - cron: "15 * * * *"    # at minute 15 every hour
+  workflow_dispatch:
+
+jobs:
+  send_demo_reading:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send demo tree-colocation reading
+        env:
+          API_URL: ${{ secrets.PROJECT_API_URL }}    # set in repo secrets
+        run: |
+          TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          curl -sS -X POST "${API_URL}/api/data" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"timestamp\": \"${TIMESTAMP}\",
+              \"device_id\": \"tree-coloc-001\",
+              \"pm25\": 15.2,
+              \"pm10\": 24.6,
+              \"temperature\": 20.3,
+              \"humidity\": 51.1,
+              \"lat\": 37.7749,
+              \"lon\": -122.4194,
+              \"notes\": \"demo tree colocation reading\"
+            }"
