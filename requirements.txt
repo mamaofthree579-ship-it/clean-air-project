@@ -1,13 +1,6 @@
-streamlit 
+streamlit
 pandas
 numpy
-plotly
-requests
-python-dotenv
 folium
-matplotlib 
 streamlit-folium
-mkdocs
-mkdocs-material
-pymdown-extensions
-mkdocs-minify-plugin
+matplotlib
