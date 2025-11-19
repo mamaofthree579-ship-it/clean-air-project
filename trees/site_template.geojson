@@ -1,0 +1,19 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "site_name": "Example Park North",
+        "site_id": "park-n-001",
+        "owner": "City Parks Dept",
+        "contact": "parks@example.org",
+        "notes": "Open lawn, irrigation available"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.4194, 37.7749]
+      }
+    }
+  ]
+}
