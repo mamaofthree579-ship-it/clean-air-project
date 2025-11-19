@@ -81,6 +81,49 @@ Grafana dashboards + shareable public viewer:
 👉 [**Data Collection**](api/air.json)
 ---
 
+🌳 Community Tree-Planting Program
+
+Clean air requires measurement, but it also requires restoration.
+
+Our regenerative tree-planting strategy:
+
+✔ Supports long-term pollutant reduction
+
+Trees absorb PM2.5, ozone, nitrogen oxides, and volatile organic compounds.
+We select species based on local ecological compatibility and pollutant absorption profiles.
+
+✔ Restores biodiversity
+
+Native, pollinator-supporting, and climate-resilient species ensure longevity and ecosystem health.
+
+✔ Builds human-nature connection
+
+We encourage:
+
+community planting circles
+
+“tree stewardship teams”
+
+intergenerational participation
+
+tree bonding rituals (talking to, caring for, appreciating trees)
+
+
+✔ Integrates with the sensor network
+
+Communities can map:
+
+before-and-after air quality
+
+canopy growth
+
+pollutant reduction trends
+
+microclimate shifts
+
+
+👉 [**Tree Planting Program**](trees/)
+
 ## 🤝 Contribute
 
 We welcome contributors of all skill levels!  
