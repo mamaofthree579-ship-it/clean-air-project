@@ -93,6 +93,10 @@ nav:
   - Data & APIs:
       - API Guide: api.md
       - Data Pipeline: data_pipeline.md
+  - Trees:
+      - Overview: tree/README.md
+      - Species List: tree/species_list.md
+      - Planting Plan: tree/planting_plan.md
   - Community:
       - Contributor Guide: CONTRIBUTING.md
       - Code of Conduct: CODE_OF_CONDUCT.md
