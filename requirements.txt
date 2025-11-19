@@ -5,7 +5,7 @@ mkdocs-minify-plugin
 streamlit 
 pandas
 numpy
-plotly
+plotly==5.22.0
 requests
 foliums
 plotly.express
