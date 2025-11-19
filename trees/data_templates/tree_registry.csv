@@ -1,0 +1,7 @@
+tree_id,species,planting_date,lat,lon,site_id,planter_name,status,notes
+tree-001,Quercus rubra,2025-03-15,37.7749,-122.4194,park-n-001,Jane Doe,healthy,"planted near playground"
+
+File: trees/data_templates/air_sensor_colocation.csv
+
+record_id,timestamp,device_id,pm25,pm10,temperature,humidity,lat,lon,notes
+rec-0001,2025-03-14T10:00:00Z,sensor01,12.4,18.5,22.3,45.0,37.7749,-122.4194,"baseline pre-plant"
