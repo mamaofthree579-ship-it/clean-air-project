@@ -1,0 +1,18 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "tree_id": "tree-001",
+        "species": "Quercus rubra",
+        "planting_date": "2025-03-15",
+        "status": "healthy"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-122.4194, 37.7749]
+      }
+    }
+  ]
+}
