@@ -1,4 +1,4 @@
-Clean Air Project — Community Air Quality Monitoring Network
+#Clean Air Project — Community Air Quality Monitoring Network
 
 The Clean Air Project is an open-source initiative that enables communities to deploy low-cost, high-accuracy air quality monitoring nodes. The system collects, processes, and shares real-time PM2.5, PM10, temperature, humidity, and VOC data.
 
