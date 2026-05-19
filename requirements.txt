@@ -4,3 +4,8 @@ numpy
 folium
 streamlit-folium
 matplotlib
+pip  
+fastapi 
+uvicorn   
+folium 
+pydantic
